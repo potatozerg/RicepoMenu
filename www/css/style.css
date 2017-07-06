@@ -1,1 +1,35 @@
-/* Empty. Add your own CSS if you like */
+h2.title{
+	text-align: center;	
+}
+hr{
+   clear: both;
+}
+p.totalPrice{
+	float: right;
+}
+p.option{
+	color:red;
+	text-align: center;
+	text-decoration: underline;
+}
+span.price{
+	color:blue;
+	display: inline;
+	float: right;
+}
+span.itemName{
+	color:green;
+	display: inline;
+}
+
+span.count{
+	display: inline;
+	float: right;
+	background-color: red;
+}
+p.addArea{
+	display: flow-root;
+}
+p{
+	margin: 0;
+}
