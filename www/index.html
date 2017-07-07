@@ -44,7 +44,7 @@
       <ion-content>
         <div class="container">
           <h2 class="title">{{testJSON.name}}</h2>
-          <p class="totalPrice">{{price|priceFilter}}</p>
+          <p class="totalPrice" ng-click="priceClicked()">{{price|priceFilter}}</p>
           <hr>
           <div ng-repeat="option in testJSON.options track by $index">
             <p class="option">{{option.name}}</p>
