@@ -10,7 +10,7 @@ app.controller('mainCtrl',function($scope){
 							{
 							  "name": "Add On",
 							  "min": 1,
-							  "max": 3,
+							  "max": 0,
 							  "items": [
 							    {
 							      "name": "bubble",
@@ -27,11 +27,11 @@ app.controller('mainCtrl',function($scope){
 							{
 							  "name": "Tea",
 							  "min": 1,
-							  "max": 1,
+							  "max": 3,
 							  "items": [
 							      {
 							        "name": "milk tea",
-							        "price": 0,
+							        "price": 50,
 							        "avilable": true
 							      },
 							      {
@@ -44,16 +44,16 @@ app.controller('mainCtrl',function($scope){
 							{
 							  "name": "Size",
 							  "min": 1,
-							  "max": 3,
+							  "max": 1,
 							  "items": [
 							      {
 							        "name": "Large",
-							        "price": 0,
+							        "price": 300,
 							        "avilable": true
 							      },
 							      {
 							        "name": "Medium",
-							        "price": 0,
+							        "price": 150,
 							        "avilable": true
 							      },
 							      {
@@ -151,14 +151,15 @@ app.controller('mainCtrl',function($scope){
 
 		//find the last element for the item and remove it
 		let index = $scope.queue[parentIndex].lastIndexOf(item);
-		$scope.queue[parentIndex].splice(index,1);
-		console.log($scope.queue[parentIndex]);		
+		$scope.queue[parentIndex].splice(index,1);	
 	}
 
 	//function that triggers after the price is clicked
 	$scope.priceClicked = function(){
 
-		if(1){
+		$scope.checkMin();
+		//if all options min meet the requirement
+		if($scope.minIndex.length == 0){
 			$scope.priceArray = [];
 			console.log($scope.price/100);
 			_.times($scope.queue.length, function(i){
@@ -167,10 +168,24 @@ app.controller('mainCtrl',function($scope){
 			console.log($scope.priceArray);
 		}else{
 
+			let alertString = "";
+			_.times($scope.minIndex.length, function(i){
+				alertString += $scope.optionsArray[$scope.minIndex[i]]["name"]+" need at least "+$scope.optionsArray[$scope.minIndex[i]]["min"]+"\n";
+			});
+			alert(alertString);
+
 		}
 	}
+	//check which option is not satisfied
+	$scope.checkMin = function(){
+		$scope.minIndex = []
+		_.times($scope.queue.length, function(i){
+			if($scope.queue[i]<$scope.optionsArray[i]["min"]){
+				$scope.minIndex.push(i);
+			}
+		});
+	}
 
-	
 });
 
 //filter for price
