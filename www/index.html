@@ -55,7 +55,7 @@
                     ng-show="showCount($parent.$index,$index)">
                 {{count[$parent.$index][$index]}}
               </span>
-              <p class="addArea"
+              <p class="addArea{{!disabledAdd($parent.$index,$index)}}"
                  ng-click="disabledAdd($parent.$index,$index)||add($parent.$index,$index)">
                 <span class="itemName">{{item.name}}</span>
                 <span class="price">+{{item.price|priceFilter}}</span>  

@@ -42,6 +42,23 @@ app.controller('mainCtrl',function($scope){
 							    ]
 							},
 							{
+							  "name": "cold or hot",
+							  "min": 2,
+							  "max": 2,
+							  "items": [
+							      {
+							        "name": "cold",
+							        "price": 50,
+							        "available": true
+							      },
+							      {
+							        "name": "hot",
+							        "price": 0,
+							        "available": true
+							      }
+							    ]
+							},
+							{
 							  "name": "Size",
 							  "min": 1,
 							  "max": 1,
@@ -178,9 +195,9 @@ app.controller('mainCtrl',function($scope){
 	}
 	//check which option is not satisfied
 	$scope.checkMin = function(){
-		$scope.minIndex = []
+		$scope.minIndex = [];
 		_.times($scope.queue.length, function(i){
-			if($scope.queue[i]<$scope.optionsArray[i]["min"]){
+			if($scope.queue[i].length < $scope.optionsArray[i]["min"]){
 				$scope.minIndex.push(i);
 			}
 		});
