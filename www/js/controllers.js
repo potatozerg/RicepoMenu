@@ -32,12 +32,12 @@ app.controller('mainCtrl',function($scope){
 							      {
 							        "name": "milk tea",
 							        "price": 50,
-							        "avilable": true
+							        "available": true
 							      },
 							      {
 							        "name": "green milk tea",
 							        "price": 0,
-							        "avilable": true
+							        "available": true
 							      }
 							    ]
 							},
@@ -49,17 +49,17 @@ app.controller('mainCtrl',function($scope){
 							      {
 							        "name": "Large",
 							        "price": 300,
-							        "avilable": true
+							        "available": true
 							      },
 							      {
 							        "name": "Medium",
 							        "price": 150,
-							        "avilable": true
+							        "available": false
 							      },
 							      {
 							        "name": "Small",
 							        "price": 0,
-							        "avilable": true
+							        "available": true
 							      }
 							    ]
 							}
@@ -185,7 +185,11 @@ app.controller('mainCtrl',function($scope){
 			}
 		});
 	}
-
+	//check if the item is disabled
+	$scope.disabledAdd = function(parentIndex,index){
+		//console.log($scope.optionsArray[parentIndex]["items"][index]["available"]);
+		return !$scope.optionsArray[parentIndex]["items"][index]["available"];	
+	}
 });
 
 //filter for price
