@@ -48,25 +48,27 @@
             <p class="option">{{option.name}}</p>
             <div ng-repeat="item in option.items track by $index">
 
+              <div class="abc">
 
-              
-              <div class="count"
+                <div class="count"
                   id="{{$index}}innerIndex{{$parent.$index}}"
                   ng-click="remove($parent.$index,$index)"
                   ng-show="showCount($parent.$index,$index)">
-                <span class="spanCount">
-                  {{count[$parent.$index][$index]}}
-                </span>
+                  <span class="spanCount">
+                    {{count[$parent.$index][$index]}}
+                  </span>
+                </div>
+
+                <div class="addArea{{!disabledAdd($parent.$index,$index)}} def" 
+                   ng-click="disabledAdd($parent.$index,$index)||add($parent.$index,$index)">
+                  
+                  <div class="priceAndNameDiv">
+                    <span class="price">+{{item.price|priceFilter}}</span> 
+                    <p class="itemName">{{item.name}}</p> 
+                  </div> 
+                </div>
               </div>
 
-
-              <div class="addArea{{!disabledAdd($parent.$index,$index)}} abc" 
-                 ng-click="disabledAdd($parent.$index,$index)||add($parent.$index,$index)">
-                <p class="itemName">{{item.name}}</p>
-                <div class="priceDiv">
-                  <span class="price">+{{item.price|priceFilter}}</span> 
-                </div> 
-              </div>
 
             </div>
             <hr>
