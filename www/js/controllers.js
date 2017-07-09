@@ -76,7 +76,7 @@ app.controller('mainCtrl',function($scope){
 							      {
 							        "name": "Medium",
 							        "price": 150,
-							        "available": true
+							        "available": false
 							      },
 							      {
 							        "name": "Small",

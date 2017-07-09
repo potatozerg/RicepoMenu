@@ -6,7 +6,6 @@ h2.title{
 }
 p{
 	line-height: 20px;
-
 }
 span.totalPrice{
 	position: absolute;
@@ -20,23 +19,25 @@ p.option{
 	text-decoration: underline;
 }
 span.price{
-	color:blue;
+	/*color:blue;*/
 	display: inline;
 	float: right;
-	/*width: 10%;*/
-	background-color: grey;
-
+	/*background-color: grey;*/
 }
 p.itemName{
-	color:green;
+	/*color:green;*/
 	display: inline;
-	background-color: red;
-
+	/*background-color: red;*/
 }
 
 div.itemNameAndPrice{
 	display: inline;
 }
+
+div.addAreafalse{
+	background-color: grey;
+}
+
 div.count{
 	display: inline;
 	float: right;	
@@ -44,9 +45,20 @@ div.count{
 	width: 30px;
  	height: auto;
  	padding-left:5px;
- 	background-color: green;
-	
+ 	/*background-color: green;*/
 }
+
+
+.animate-show-hide.ng-hide {
+	transform: translate(100%);
+}
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+ 	transition: all linear 1s;
+
+}
+
 
 span.spanCount{
 	display: inline-block;
@@ -57,23 +69,12 @@ span.spanCount{
 	border-radius: 50%;
 }
 
-div.abc{
-	background-color: yellow;
+div.all{
+	/*background-color: yellow;*/
 	width: 100%;
 }
 
 div.priceAndNameDiv{
 	display: inline;
 	word-wrap: break-word;
-}
-
-div.def{
-	display: block;
-	word-wrap: break-word;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
 }
