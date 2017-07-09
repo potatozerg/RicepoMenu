@@ -43,23 +43,31 @@
       </ion-header-bar>
       <ion-content>
         <div class="container">
-          <h2 class="title">{{testJSON.name}}</h2>
-          <p class="totalPrice" ng-click="priceClicked()">{{price|priceFilter}}</p>
-          <hr>
+          <h2 class="title">{{testJSON.name}}<span class="totalPrice" ng-click="priceClicked()">{{price|priceFilter}}</span></h2>        
           <div ng-repeat="option in testJSON.options track by $index">
             <p class="option">{{option.name}}</p>
             <div ng-repeat="item in option.items track by $index">
-              <span class="count"
-                    id="{{$index}}innerIndex{{$parent.$index}}"
-                    ng-click="remove($parent.$index,$index)"
-                    ng-show="showCount($parent.$index,$index)">
-                {{count[$parent.$index][$index]}}
-              </span>
-              <p class="addArea{{!disabledAdd($parent.$index,$index)}}"
+
+
+              
+              <div class="count"
+                  id="{{$index}}innerIndex{{$parent.$index}}"
+                  ng-click="remove($parent.$index,$index)"
+                  ng-show="showCount($parent.$index,$index)">
+                <span class="spanCount">
+                  {{count[$parent.$index][$index]}}
+                </span>
+              </div>
+
+
+              <div class="addArea{{!disabledAdd($parent.$index,$index)}} abc" 
                  ng-click="disabledAdd($parent.$index,$index)||add($parent.$index,$index)">
-                <span class="itemName">{{item.name}}</span>
-                <span class="price">+{{item.price|priceFilter}}</span>  
-              </p>   
+                <p class="itemName">{{item.name}}</p>
+                <div class="priceDiv">
+                  <span class="price">+{{item.price|priceFilter}}</span> 
+                </div> 
+              </div>
+
             </div>
             <hr>
           </div>

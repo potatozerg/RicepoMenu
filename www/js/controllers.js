@@ -55,13 +55,18 @@ app.controller('mainCtrl',function($scope){
 							        "name": "hot",
 							        "price": 0,
 							        "available": true
+							      },
+							      {
+							        "name": "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest",
+							        "price": 0,
+							        "available": true
 							      }
 							    ]
 							},
 							{
 							  "name": "Size",
 							  "min": 1,
-							  "max": 1,
+							  "max": 0,
 							  "items": [
 							      {
 							        "name": "Large",
@@ -71,7 +76,7 @@ app.controller('mainCtrl',function($scope){
 							      {
 							        "name": "Medium",
 							        "price": 150,
-							        "available": false
+							        "available": true
 							      },
 							      {
 							        "name": "Small",
