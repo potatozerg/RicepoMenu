@@ -48,19 +48,15 @@
           <div ng-repeat="option in testJSON.options track by $index">
             <p class="option">{{option.name}}</p>
             <div ng-repeat="item in option.items track by $index">
-           
-              <div class="all">
-                
-                <div class="itemName addArea{{!disabledAdd($parent.$index,$index)}} pad" 
+              <div class="all">  
+                <div class="itemName{{showCount($parent.$index,$index)}} addArea{{!disabledAdd($parent.$index,$index)}} pad" 
                       ng-click="disabledAdd($parent.$index,$index)||add($parent.$index,$index)">
                   {{item.name}}
                 </div> 
-
-                <div class="price show{{showCount($parent.$index,$index)}} addArea{{!disabledAdd($parent.$index,$index)}} pad" 
+                <div class="price{{showCount($parent.$index,$index)}} addArea{{!disabledAdd($parent.$index,$index)}} pad" 
                     ng-click="disabledAdd($parent.$index,$index)||add($parent.$index,$index)">
                   +{{item.price|priceFilter}}
                 </div>
-
                 <div class="count animate-show-hide countPad"
                       id="{{$index}}innerIndex{{$parent.$index}}"
                       ng-click="remove($parent.$index,$index)"
@@ -69,7 +65,7 @@
                     {{count[$parent.$index][$index]}}
                   </span>
                 </div> 
-              </div>     
+              </div>
             </div>
             <hr>
           </div>

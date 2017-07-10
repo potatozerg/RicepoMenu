@@ -18,16 +18,33 @@ p.option{
 	text-align: center;
 	text-decoration: underline;
 }
-div.price{
-	
-	display: initial;
-	max-width: 5%;
-	min-width: 3%;
-	text-align: right;
-	color:blue;
-	background-color: grey;
 
+
+div.pricefalse,div.pricetrue{
+	width: 4%;
+	padding-right: 3px;
+	flex: none;
+	text-align: right;
+	/*color:blue;*/
+	/*background-color: grey;*/
+	order: 2;
+	transition: all linear 0.2s;
 }
+
+
+div.pricefalse{
+	/*transform: translateX(6%);*/
+	/*transition: all linear 1s;*/
+}
+
+div.pricetrue{
+	
+	
+	transition: all linear 0.2s;
+}
+
+
+
 
 div.pad{
 	padding-top: 5px;
@@ -39,16 +56,29 @@ div.countPad{
 	padding-bottom: 5px;
 
 }
-div.itemName{
+div.itemNametrue{
 
 	display: initial;
-	max-width: 95%;
-	min-width: 90%;
-	color:green;
-	background-color: red;
-	
-	/*word-wrap: break-word;*/
+	min-width: 92%;
+	max-width: 92%;
+	order: 1;
+	/*color:green;*/
+	/*background-color: red;*/
+	transition: all linear 0.2s;
 }
+
+div.itemNamefalse{
+
+	display: initial;
+	min-width: 96%;
+	max-width: 96%;
+	order: 1;
+	/*color:green;*/
+	/*background-color: red;*/
+	transition: all linear 0.2s;
+
+}
+
 
 div.itemNameAndPrice{
 	display: inline;
@@ -59,37 +89,26 @@ div.addAreafalse{
 }
 
 div.count{
-
-	flex: initial;
-	min-width: 0px;
-	right: 10px;
-	text-align: left;
-	width: 30px;
- 	height: auto;
- 	padding-left:5px;
- 	background-color: green;
+	position: absolute;
+	/*flex: 1;*/
+	width: 4%;
+	right: 0px;
+	order: 3;
+ 	height: 100%;
+ 	padding-left: 10px;
+ 	/*background-color: green;*/
 }
 
-
 .animate-show-hide.ng-hide {
+	
 	transform: translate(100%);
 }
 
 .animate-show-hide.ng-hide-add,
 .animate-show-hide.ng-hide-remove {
+
  	transition: all linear 0.2s;
 
-}
-
-div.showfalse{
-
-	transition: all linear 0.2s;
-}
-
-div.showtrue{
-	
-	transform: translate(-10px);
-	transition: all linear 0.2s;
 }
 
 
@@ -106,8 +125,11 @@ span.spanCount{
 div.all{
 
 	display: flex;	
-	background-color: yellow;
-	width: 100%;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*background-color: yellow;*/
+	
 }
 
 div.everything{
