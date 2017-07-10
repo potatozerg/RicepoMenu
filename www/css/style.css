@@ -21,7 +21,7 @@ p.option{
 
 
 div.pricefalse,div.pricetrue{
-	width: 4%;
+	width: 8%;
 	padding-right: 3px;
 	flex: none;
 	text-align: right;
@@ -59,8 +59,8 @@ div.countPad{
 div.itemNametrue{
 
 	display: initial;
-	min-width: 92%;
-	max-width: 92%;
+	min-width: 84%;
+	max-width: 84%;
 	order: 1;
 	/*color:green;*/
 	/*background-color: red;*/
@@ -70,8 +70,8 @@ div.itemNametrue{
 div.itemNamefalse{
 
 	display: initial;
-	min-width: 96%;
-	max-width: 96%;
+	min-width: 92%;
+	max-width: 92%;
 	order: 1;
 	/*color:green;*/
 	/*background-color: red;*/
@@ -91,7 +91,7 @@ div.addAreafalse{
 div.count{
 	position: absolute;
 	/*flex: 1;*/
-	width: 4%;
+	width: 8%;
 	right: 0px;
 	order: 3;
  	height: 100%;
