@@ -43,14 +43,14 @@
         <h1 class="title">Menu</h1>
       </ion-header-bar>
       <ion-content>
-        <div>
+        <div class="everything">
           <h2 class="title">{{testJSON.name}}<span class="totalPrice" ng-click="priceClicked()">{{price|priceFilter}}</span></h2>        
           <div ng-repeat="option in testJSON.options track by $index">
             <p class="option">{{option.name}}</p>
             <div ng-repeat="item in option.items track by $index">
               <div class="all">
 
-                <div class="count animate-show-hide"
+                <div class="count animate-show-hide countPad"
                   id="{{$index}}innerIndex{{$parent.$index}}"
                   ng-click="remove($parent.$index,$index)"
                   ng-show="showCount($parent.$index,$index)">
@@ -59,7 +59,7 @@
                   </span>
                 </div>
 
-                <div class="addArea{{!disabledAdd($parent.$index,$index)}}" 
+                <div class="addArea{{!disabledAdd($parent.$index,$index)}} pad" 
                    ng-click="disabledAdd($parent.$index,$index)||add($parent.$index,$index)">
                   
                   <div class="priceAndNameDiv">

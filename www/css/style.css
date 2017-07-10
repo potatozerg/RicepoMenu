@@ -19,16 +19,28 @@ p.option{
 	text-decoration: underline;
 }
 div.price{
-	/*color:blue;*/
+	
+	color:blue;
 	display: inline;
 	float: right;
-	/*background-color: grey;*/
+	background-color: grey;
 }
 
+div.pad{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div.countPad{
+
+	padding-top: 4px;
+	padding-bottom: 4px;
+
+}
 div.itemName{
-	/*color:green;*/
+
+	color:green;
 	display: inline;
-	/*background-color: red;*/
+	background-color: red;
 	
 	/*word-wrap: break-word;*/
 }
@@ -42,13 +54,14 @@ div.addAreafalse{
 }
 
 div.count{
+
 	position: absolute;
-	right: 0;
+	right: 10px;
 	text-align: left;
 	width: 30px;
  	height: auto;
  	padding-left:5px;
- 	/*background-color: green;*/
+ 	background-color: green;
 }
 
 
@@ -69,7 +82,7 @@ div.showfalse{
 
 div.showtrue{
 	
-	transform: translate(-25px);
+	transform: translate(-30px);
 	transition: all linear 0.2s;
 }
 
@@ -84,10 +97,15 @@ span.spanCount{
 }
 
 div.all{
-	/*background-color: yellow;*/
+	background-color: yellow;
 	width: 100%;
 }
 
 div.priceAndNameDiv{
 	display: inline;	
+}
+
+div.everything{
+	margin-left: 10px;
+	margin-right: 10px;
 }
