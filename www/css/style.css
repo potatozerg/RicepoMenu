@@ -20,10 +20,13 @@ p.option{
 }
 div.price{
 	
+	display: initial;
+	max-width: 5%;
+	min-width: 3%;
+	text-align: right;
 	color:blue;
-	display: inline;
-	float: right;
 	background-color: grey;
+
 }
 
 div.pad{
@@ -38,8 +41,10 @@ div.countPad{
 }
 div.itemName{
 
+	display: initial;
+	max-width: 95%;
+	min-width: 90%;
 	color:green;
-	display: inline;
 	background-color: red;
 	
 	/*word-wrap: break-word;*/
@@ -55,7 +60,8 @@ div.addAreafalse{
 
 div.count{
 
-	position: absolute;
+	flex: initial;
+	min-width: 0px;
 	right: 10px;
 	text-align: left;
 	width: 30px;
@@ -82,7 +88,7 @@ div.showfalse{
 
 div.showtrue{
 	
-	transform: translate(-30px);
+	transform: translate(-10px);
 	transition: all linear 0.2s;
 }
 
@@ -96,13 +102,12 @@ span.spanCount{
 	border-radius: 50%;
 }
 
+
 div.all{
+
+	display: flex;	
 	background-color: yellow;
 	width: 100%;
-}
-
-div.priceAndNameDiv{
-	display: inline;	
 }
 
 div.everything{
