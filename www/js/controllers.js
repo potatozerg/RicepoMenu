@@ -112,6 +112,8 @@ app.controller('mainCtrl',function($scope){
 		if($scope.count[parentIndex][index] > 0){
 			return true;
 		}else{
+			//in case double click on the disappearing count
+			$scope.count[parentIndex][index] = 0;
 			return false;
 		}
 	}

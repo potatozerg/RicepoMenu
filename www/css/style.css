@@ -18,16 +18,19 @@ p.option{
 	text-align: center;
 	text-decoration: underline;
 }
-span.price{
+div.price{
 	/*color:blue;*/
 	display: inline;
 	float: right;
 	/*background-color: grey;*/
 }
-p.itemName{
+
+div.itemName{
 	/*color:green;*/
 	display: inline;
 	/*background-color: red;*/
+	
+	/*word-wrap: break-word;*/
 }
 
 div.itemNameAndPrice{
@@ -39,8 +42,8 @@ div.addAreafalse{
 }
 
 div.count{
-	display: inline;
-	float: right;	
+	position: absolute;
+	right: 7%;
 	text-align: left;
 	width: 30px;
  	height: auto;
@@ -55,8 +58,19 @@ div.count{
 
 .animate-show-hide.ng-hide-add,
 .animate-show-hide.ng-hide-remove {
- 	transition: all linear 1s;
+ 	transition: all linear 0.2s;
 
+}
+
+div.showfalse{
+
+	transition: all linear 0.2s;
+}
+
+div.showtrue{
+	
+	transform: translate(-25px);
+	transition: all linear 0.2s;
 }
 
 
@@ -75,6 +89,5 @@ div.all{
 }
 
 div.priceAndNameDiv{
-	display: inline;
-	word-wrap: break-word;
+	display: inline;	
 }
